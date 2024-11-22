@@ -1,0 +1,99 @@
+<html lang="es">
+     <head>
+          <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Origins Gamer Store</title>
+         <!-- Importar las tipografías Manrope y Roboto desde Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+         <!-- Bootstrap CSS local -->
+        <link rel="stylesheet" href="stylesheets/css/bootstrap.css">
+        <!-- Archivo CSS personalizado -->
+        <link rel="stylesheet" href="stylesheets/style.css">
+     </head>
+<body>
+  <header class="simple-header">
+    <!-- Logo como botón de inicio -->
+    <a href="index.html" class="logo-gris">
+        <img src="img/logo/logo gris.png" alt="Logo" class="logo-image">
+    </a>
+    <!-- Icono de cerrar que regresa a la página anterior -->
+    <button class="close-button" onclick="history.back()">
+        <svg class="close-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+</header>
+ <!-- Contenido de la pagina -->
+<div class="container-contact">
+  <h3 style="padding: 1em 7vw; color: #1a1a1a;">Contacto ORIGNS</h3>
+  <div class="container cont-form-cont my-5">
+    <div class="row">
+        <!-- Columna del formulario, ocupa la mitad del ancho en pantallas grandes y el 100% en pantallas pequeñas -->
+        <div class="col-lg-6 col-md-6 col-12">
+            <form class="mt-4 p-4 border rounded" id="cont-form">
+                <!-- Tipo de contacto -->
+                <div class="mb-3">
+                    <label for="contactType" class="form-label">
+                        <h4 style="color: #1a1a1a;">Tipo de Contacto</h4>
+                    </label>
+                    <select class="form-select" id="contactType" required>
+                        <option value="" selected disabled>Selecciona una opción</option>
+                        <option value="cliente">Cliente</option>
+                        <option value="proveedor">Proveedor</option>
+                        <option value="distribuidor">Distribuidor</option>
+                    </select>
+                </div>
+                <!-- Datos de contacto -->
+                <label for="contactinf" class="form-label">
+                    <h4 style="color: #1a1a1a;">Datos de contacto</h4>
+                </label>
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="firstName" class="form-label">Nombre</label>
+                        <input type="text" class="form-control-contact" id="firstName" placeholder="Nombre" required>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="lastName" class="form-label">Apellido</label>
+                        <input type="text" class="form-control-contact" id="lastName" placeholder="Apellido" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="phone" class="form-label">Celular</label>
+                        <input type="tel" class="form-control-contact" id="phone" placeholder="Ej: +591 777 88 999" required>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="city" class="form-label">Ciudad</label>
+                        <input type="text" class="form-control-contact" id="city" placeholder="Ciudad" required>
+                    </div>
+                </div>
+                <!-- Consulta o comentario -->
+                <div class="mb-3">
+                    <label for="message" class="form-label">Escribe tu consulta o comentario</label>
+                    <textarea class="form-control-contact" id="message" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <!-- Botón de enviar -->
+                <button type="submit" class="btn btn-primary w-100" style="max-width: 250px; background-color: #ff6600; border-radius: 16px; border: none;">Enviar</button>
+            </form>
+        </div>
+        <!-- Columna de la imagen, ocupa la mitad del ancho en pantallas grandes y desaparece en pantallas pequeñas -->
+        <div class="col-lg-6 col-md-6 d-none d-md-block img-contact">
+            <img src="img/img contact.png" class="img-fluid" alt="Imagen de contacto">
+        </div>
+    </div>
+</div>
+
+<div class="footer-simple">
+  <div class="footer" style="max-height: 130px; height: 6.771vw;min-height: 70px; background-color: #efefef; display: flex; justify-content: space-around; align-items: center; margin-top: 2em;">
+    <p>©ORIGINS GAMER STORE      -   Todos los derechos estan reservados</p></a>
+    <a href=""><p>Terminos de aceptación</p></a>
+    <a href=""><p>Política de privacidad</p></a>
+  </div>
+  <div class="#" style="height: 20px; background-color: #404040;"></div>
+</div>
+    <!-- Bootstrap JS local -->
+    <script src="scripts/js/bootstrap.bundle.min.js"></script>
+    <!-- Archivo JavaScript personalizado -->
+    <script src="scripts/js/main.js"></script>
+</body>
+</html>

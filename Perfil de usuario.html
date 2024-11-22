@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <header class="simple-header">
+        <!-- Logo como botón de inicio -->
+        <a href="index.html" class="logo-gris">
+            <img src="img/logo/logo gris.png" alt="Logo" class="logo-image">
+        </a>
+        <!-- Icono de cerrar que regresa a la página anterior -->
+        <button class="close-button" onclick="history.back()">
+            <svg class="close-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </header>
+  <div class="container mt-5">
+    <h2>Perfil de Usuario</h2>
+    <p>Aquí puedes ver la información de tu cuenta.</p>
+    <table class="table table-bordered">
+      <tr>
+        <th>Nombre</th>
+        <td>Juan Pérez</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>juan.perez@example.com</td>
+      </tr>
+      <tr>
+        <th>Fecha de Registro</th>
+        <td>01/01/2022</td>
+      </tr>
+    </table>
+
+    <a href="configuracion.html" class="btn btn-primary">Configuración</a>
+    <a href="cerrar-sesion.html" class="btn btn-danger">Cerrar sesión</a>
+  </div>
+  <div class="footer-simple">
+    <div class="footer" style="max-height: 130px; height: 6.771vw;min-height: 70px; background-color: #efefef; display: flex; justify-content: space-around; align-items: center; margin-top: 2em;">
+      <p>©ORIGINS GAMER STORE      -   Todos los derechos estan reservados</p></a>
+      <a href=""><p>Terminos de aceptación</p></a>
+      <a href=""><p>Política de privacidad</p></a>
+    </div>
+    <div class="#" style="height: 20px; background-color: #404040;"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script>
+    // Verificar si el usuario está logueado
+    // En perfil.html
+document.addEventListener('DOMContentLoaded', function () {
+  if (localStorage.getItem('isLoggedIn') !== 'true') {
+    window.location.href = 'login.html'; // Redirige al login si no está autenticado
+  } else {
+    // Muestra el nombre del usuario, por ejemplo
+    const userName = localStorage.getItem('userName');
+    document.getElementById('welcomeMessage').textContent = `Bienvenido, ${userName}`;
+  }
+});
+
+    // Ejemplo de autenticación (solo una simulación básica)
+document.getElementById('loginForm').addEventListener('submit', function() {
+    // Aquí puedes agregar la lógica para verificar las credenciales en el backend (API)
+    // Esto es solo un ejemplo de almacenamiento local para simular el inicio de sesión
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+  
+    // Verificar si las credenciales son correctas (en este caso solo una simulación)
+    if (email === 'juan@example.com' && password === '123456') {
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('userName', 'Juan Pérez'); // Guardamos nombre del usuario
+      window.location.href = 'perfil.html'; // Redirigir al perfil
+    } else {
+      alert('Credenciales incorrectas');
+    }
+  });
+//formulario login
+document.querySelector('button[type="submit"]').addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Aquí deberías verificar las credenciales, por ejemplo, con localStorage
+    const storedEmail = localStorage.getItem('userEmail');
+    const storedPassword = localStorage.getItem('userPassword');
+
+    if (email === storedEmail && password === storedPassword) {
+        // Si las credenciales son correctas, redirige al usuario
+        localStorage.setItem('isLoggedIn', true);
+        window.location.href = 'perfil.html';  // Página a la que será redirigido
+    } else {
+        alert('Correo o contraseña incorrectos');
+    }
+});
+  </script>
+</body>
+</html>

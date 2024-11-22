@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+     <head>
+          <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Origins Gamer Store</title>
+         <!-- Importar las tipografías Manrope y Roboto desde Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+         <!-- Bootstrap CSS local -->
+        <link rel="stylesheet" href="stylesheets/css/bootstrap.css">
+        <!-- Archivo CSS personalizado -->
+        <link rel="stylesheet" href="stylesheets/style.css">
+     </head>
+<body>
+  <header class="site-header">
+    <div class="container-header"><a href="index.html">
+    <div class="logo">
+        <img src="img/logo/Recurso 7@300x.png"  alt="Logo"/>
+    </div></a>
+      <div class="header-right">
+          <nav class="main-navigation">
+              <ul class="nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProductos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Productos
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
+                      <div class="dropdown-columns">
+                          <!-- Columna 1: Accesorios -->
+                          <li class="column">
+                              <h6>Accesorios</h6>
+                              <hr class="dropdown-divider">
+                              <ul class="list-unstyled">
+                                  <li><a class="dropdown-item" href="productos.html">Monitores</a></li>
+                                  <li><a class="dropdown-item" href="productos.html">Consolas</a></li>
+                              </ul>
+                          </li>
+                          <!-- Columna 2: Componentes -->
+                          <li class="column">
+                              <h6>Componentes</h6>
+                              <hr class="dropdown-divider">
+                              <ul class="list-unstyled">
+                                  <li><a class="dropdown-item" href="productos.html">Tarjetas madre</a></li>
+                                  <li><a class="dropdown-item" href="productos.html">Procesadores</a></li>
+                                  <li><a class="dropdown-item" href="productos.html">Tarjetas de video</a></li>
+                                  <li><a class="dropdown-item" href="productos.html">Fuentes de poder</a></li>
+                                  <li><a class="dropdown-item" href="productos.html">Memorias RAM</a></li>
+                              </ul>
+                          </li>
+                          <!-- Columna 3: Periféricos -->
+                          <li class="column">
+                              <h6>Periféricos</h6>
+                              <hr class="dropdown-divider">
+                              <ul class="list-unstyled">
+                                  <li><a class="dropdown-item" href="productos.html">Audífonos</a></li>
+                              </ul>
+                          </li>
+                      </div>
+                  </ul>
+              </li>
+      
+              <!-- Menú de Marcas -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMarcas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Marcas
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMarcas">
+                      <li class="column">
+                          <h6>Marcas</h6>
+                          <hr class="dropdown-divider">
+                          <ul class="list-unstyled">
+                              <li><a class="dropdown-item" href="marcas.html">ASUS</a></li>
+                              <li><a class="dropdown-item" href="marcas.html">LOGITECH</a></li>
+                              <li><a class="dropdown-item" href="marcas.html">RAZER</a></li>
+                              <li><a class="dropdown-item" href="marcas.html">CORSAIR</a></li>
+                              <li><a class="dropdown-item" href="marcas.html">SAMSUNG</a></li>
+                              <li><a class="dropdown-item" href="marcas.html">BE QUIET</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+                  <li><a class="nav-link" href="soporte.html">Soporte</a></li>
+                  <li><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
+              </ul>
+          </nav>
+          <div class="input-group">
+              <input class="form-control" type="search" placeholder="Buscar..." aria-label="Buscar">
+              <button class="btn btn-search" type="submit">
+                  <img src="icons/search.svg" alt="search icon" class="icon-lupa">
+              </button>
+          </div>            
+          <div class="vertical-line" style="margin: 0 20px 0 20px;"></div>
+          <!-- Íconos -->
+          <div class="icon-container">
+              <!-- Ícono del usuario -->
+              <a href="user.html" class="icon-link">
+                <svg class="icon-header user-icon" viewBox="0 0 125.09 134.03" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path d="m89.36,71.48s0,8.94-26.81,8.94-26.8-8.94-26.8-8.94c0,0-35.74,0-35.74,62.55h125.09c0-62.55-35.74-62.55-35.74-62.55Zm-66.09,14.34c3.07-2.96,6.1-4.56,8.44-5.42,4.69,3.61,13.68,8.96,30.85,8.96s26.16-5.34,30.85-8.96c2.33.86,5.36,2.46,8.43,5.42,5.86,5.65,13.05,16.13,14.33,39.28H8.93c1.28-23.15,8.48-33.63,14.33-39.28Z"/>
+                    <path d="m62.55,0C42.81,0,26.81,16,26.81,35.74s16.01,35.74,35.74,35.74,35.75-16.01,35.75-35.74S82.29,0,62.55,0Zm0,61.27c-14.09,0-25.52-11.43-25.52-25.53s11.43-25.53,25.52-25.53,25.53,11.43,25.53,25.53-11.43,25.53-25.53,25.53Z"/>
+                  </g>
+                </svg>
+              </a>
+              <!-- Ícono del carrito -->
+              <a href="cart.html" class="icon-link">
+                <svg class="icon-header cart-icon" viewBox="0 0 134.03 133.98" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path d="m125.09,0c-8.38,0-10.86,7.86-11.14,8.83-.02.07-.03.1-.03.1l-17.86,71.48h-52.74v-.11h-19.83c-7.09-14.66-14.02-40.06-14.44-44.5.03,0,.06,0,.08-.01h34.19v-.1h54.96v-8.94H8.93S0,26.74,0,35.68s17.87,53.67,17.87,53.67h75.96l-4.47,17.87H22.34v.06c-1.56,0-3.07.27-4.47.77-5.18,1.83-8.88,6.77-8.88,12.57,0,7.37,5.98,13.35,13.35,13.35s13.34-5.98,13.34-13.35c0-1.56-.27-3.07-.77-4.46h46.34c-.5,1.4-.78,2.91-.78,4.48,0,7.37,5.98,13.35,13.35,13.35s13.34-5.98,13.34-13.35c0-1.59-.28-3.11-.79-4.52-.25-.69-.55-1.36-.91-1.99-1.36-2.44-3.47-4.4-6.01-5.58-.38-.18-.76-.33-1.16-.47v-.84h0L122.3,11.17s0-.03.03-.1c.14-.43.81-2.14,2.77-2.14h8.94V0h-8.94ZM22.34,125.15c-2.47,0-4.47-2-4.47-4.47s2-4.47,4.47-4.47,4.47,2,4.47,4.47-2,4.47-4.47,4.47Zm71.48.01c-2.47,0-4.47-2-4.47-4.47s2-4.47,4.47-4.47,4.47,2,4.47,4.47-2,4.47-4.47,4.47Z"/>
+                  </g>
+                </svg>
+              </a>
+            </div>       
+      </div>
+     <!-- Botón de lupa solo para versión móvil (abre overlay) -->
+    <button class="btn-search-mobile">
+      <img src="icons/searchw.svg" alt="">
+  </button>
+  <!-- Botón del menú hamburguesa para tablet y móvil -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+<!-- Menú colapsable para tablet y móvil -->
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav me-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Productos
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="productosDropdown">
+        <li><a class="dropdown-item" href="productos.html">Monitores</a></li>
+        <li><a class="dropdown-item" href="productos.html">Consolas</a></li>
+        <li><a class="dropdown-item" href="productos.html">Tarjetas madre</a></li>
+        <li><a class="dropdown-item" href="productos.html">Procesadroes</a></li>
+        <li><a class="dropdown-item" href="productos.html">Tarjetas de video</a></li>
+        <li><a class="dropdown-item" href="productos.html">Fuentes de poder</a></li>
+        <li><a class="dropdown-item" href="productos.html">Memorias RAM</a></li>
+        <li><a class="dropdown-item" href="productos.html">Audifonos</a></li>
+      </ul>
+    </li>
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="marcasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Marcas
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="marcasDropdown">
+        <li><a class="dropdown-item" href="marcas.html">ASUS</a></li>
+        <li><a class="dropdown-item" href="marcas.html">LOGITECH</a></li>
+        <li><a class="dropdown-item" href="marcas.html">RAZER</a></li>
+        <li><a class="dropdown-item" href="marcas.html">CORSAIR</a></li>
+        <li><a class="dropdown-item" href="marcas.html">SAMSUNG</a></li>
+        <li><a class="dropdown-item" href="marcas.html">BE QUIET</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item"><a class="nav-link" href="soporte.html">Soporte</a></li>
+    <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="usuarioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Usuario
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="usuarioDropdown">
+        <li><a class="dropdown-item" href="Perfil de usuario.html">Perfil</a></li>
+        <li><a class="dropdown-item" href="#">Configuración</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item"><a class="nav-link" href="cart.html">Compras</a></li>
+  </ul>
+</div>
+
+<!-- Overlay de búsqueda para móvil -->
+<div class="search-overlay search-overlay-a">
+  <div class="input-group input-group-mobile">
+      <input class="search-input" type="search" placeholder="Buscar..." aria-label="Buscar">
+      <button class="btn btn-search" type="submit">
+        <img src="icons/search.svg" alt="">
+      </button>
+  </div>
+</div>
+</header>
+<!--carrusel-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active hero-1">
+          <picture>
+            <source media="(max-width: 520px)" srcset="img/movil1.png">
+            <img src="img/Sin título-1Mesa de trabajo 1.jpg" class="d-block w-100" alt="...">
+          </picture>
+          <div class="carousel-caption text-start">
+            <div class="text-position-carousel">
+              <h2 class="sub-text">Sumérgete en la experiencia definitiva</h2>
+              <h1 class="main-text">Inmersión total con ROG Swift OLED PG34WCDM</h1>
+            </div>
+          <div class="call">
+            <a href="compra.html" class="btn btn-primary btn-custom-comprar">Comprar</a>
+            <a href="productos.html" class="btn btn-link btn-custom-ver-mas" style="color: white;">Ver más</a>            
+          </div>
+          </div>
+          <div class="t-cont-movil"></div>
+        </div>
+        <div class="carousel-item hero-2">
+          <picture>
+            <source media="(max-width: 520px)" srcset="img/movil2.png">
+            <img src="img/Sin título-1Mesa de trabajo 4.jpg" class="d-block w-100" alt="...">
+          </picture>
+          <div class="carousel-caption text-start">
+            <h2 class="sub-text">Potencia portátil, rendimiento sin límites</h2>
+            <h1 class="main-text">La ROG Ally X donde quiera que vayas</h1>
+            <div class="call">
+              <a href="compra.html" class="btn btn-primary btn-custom-comprar">Comprar</a>
+              <a href="productos.html" class="btn btn-link btn-custom-ver-mas" style="color: white;">Ver más</a>
+            </div>
+            </div>
+            <div class="t-cont-movil"></div>
+        </div>
+        <div class="carousel-item hero-3">
+          <picture>
+            <source media="(max-width: 520px)" srcset="img/movil3.png">
+            <img src="img/Sin título-1Mesa de trabajo 2.jpg" class="d-block w-100" alt="...">
+          </picture>
+          <div class="carousel-caption text-start">
+            <h2 class="sub-text" style="color: #1a1a1a;">Soporte especializado</h2>
+            <h1 class="main-text" style="line-height: 1;">Estamos disponibles en cualquier momento para resolver tus problema</h1>
+            <div class="call">
+              <a href="soporte.html" class="btn btn-primary btn-custom-soporte">Soporte</a>
+              <a href="contactanos.html" class="btn btn-link btn-custom-ver-mas" style="color: #1a1a1a;">Ver más</a>
+            </div>
+            </div>
+            <div class="t-cont-movil"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Pantallas del Home -->
+     <div class="#" style="text-align: center; padding-top: 2.917vw; color: #ff6600;">
+      <h2 style="padding: 0 5vw;">Explora nuestra AMPLIA variedad de PRODUCTOS</h2> </div>
+      <div id="carousel-product" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+            <!-- Item 1 (Pantallas grandes) -->
+            <div class="carousel-item active">
+                <div class="carousel-productos-wrapper">
+                    <div class="producto">
+                        <img src="img/png/productos clasificados (1).png" onclick="location.href='productos.html'" alt="Fuentes de poder">
+                        <h5>Fuentes de poder</h5>
+                    </div>
+                    <div class="producto">
+                        <img src="img/png/productos clasificados (2).png" onclick="location.href='productos.html'" alt="Procesadores">
+                        <h5>Procesadores</h5>
+                    </div>
+                    <div class="producto">
+                        <img src="img/png/productos clasificados (3).png" onclick="location.href='productos.html'" alt="Tarjetas de video">
+                        <h5>Tarjetas de video</h5>
+                    </div>
+                    <div class="producto">
+                        <img src="img/png/productos clasificados (4).png" onclick="location.href='productos.html'" alt="Placas madre">
+                        <h5>Placas madre</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 2 (Pantallas grandes) -->
+            <div class="carousel-item">
+                <div class="carousel-productos-wrapper">
+                    <div class="producto">
+                        <img src="img/png/productos clasificados (5).png" onclick="location.href='productos.html'" alt="Monitores">
+                        <h5>Monitores</h5>
+                    </div>
+                    <div class="producto">
+                        <img src="img/png/productos clasificados (6).png" onclick="location.href='productos.html'" alt="Memorias RAM">
+                        <h5>Memorias RAM</h5>
+                    </div>
+                    <div class="producto">
+                        <img src="img/png/productos clasificados (7).png" onclick="location.href='productos.html'" alt="Audífonos">
+                        <h5>Audífonos</h5>
+                    </div>
+                    <div class="producto">
+                        <img src="img/png/productos clasificados (8).png" onclick="location.href='productos.html'" alt="Consolas">
+                        <h5>Consolas</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Carousel Controls (Flechas para pantallas grandes) -->
+        <div class="flechas">
+            <button class="carousel-control-prev product-carousel-control" type="button" data-bs-target="#carousel-product" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next product-carousel-control" type="button" data-bs-target="#carousel-product" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    
+        <!-- Indicadores (Para pantallas pequeñas) -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel-product" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel-product" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel-product" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carousel-product" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+    </div>
+    
+<!-- Productos mas buscados -->
+    <section class="productos-buscados">
+      <div class="container">
+        <div class="subtitulo1" style="display: flex;">
+          <img src="icons/product.svg" style="height: 1.7vw; max-height: 50px; min-height: 18px;" alt="">
+          <h3 class="#" style="text-align: left;margin-bottom: 0.625vw; margin-left: 0.625vw;">PRODUCTOS MÁS BUSCADOS</h3>
+        </div>
+          <p class="#" style="text-align: left; color: #1a1a1a; margin-bottom: 0.8vw;">Nuestros clientes confían en estos productos</p>
+          <div class="grid-productos">
+              <div class="card-producto">
+                  <img src="img/productos mas buscados/1.png" alt="Producto 1">
+                  <div class="texto-producto">
+                    <h3 class="id-product">Monitor gaming ROG Strix XG27AQ-W</h3>
+
+                    <p class="stock">Stock: 5 unidades</p>
+                    <p class="caracteristicas">Características:</p>
+                    <p class="caracteristicas-extra">Pantalla: 27" WQHD (2560 x 1440).<br>Frecuencia: 170 Hz (OC).<br>Tiempo: 1 ms (GTG).<br>G-SYNC: Compatible.</p>
+                    <h3 class="precio"> 6000 BOB </h3>
+                    <button class="btn btn-warning btn-block btn-sm btn-md btn-lg" onclick="location.href='compra.html'" style="margin: 0 auto;">Ver más</button>
+                  </div>
+              </div>
+              <div class="card-producto">
+                  <img src="img/productos mas buscados/2.png" alt="Producto 2">
+                  <div class="texto-producto">
+                    <h3 class="id-product">Tarjeta Gráfica RTX 4060TI ROG STRIX</h3>
+
+                    <p class="stock">Stock: 10 unidades</p>
+                    <p class="caracteristicas">Características:</p>
+                    <p class="caracteristicas-extra">GPU: NVIDIA Ada Lovelace con DLSS 3.<br>Memoria: 8 GB GDDR6.<br>Rendimiento: 353 AI TOPS.<br>Enfriamiento: Ventiladores Axial-tech.</p>
+                    <h3 class="precio"> 6200 BOB </h3>
+                    <button class="btn btn-warning btn-block btn-sm btn-md btn-lg" onclick="location.href='compra.html'" style="margin: 0 auto;">Ver más</button>
+                  </div>
+              </div>
+              <div class="card-producto">
+                  <img src="img/productos mas buscados/3.png" alt="Producto 3">
+                  <div class="texto-producto">
+                    <h3 class="id-product">Monitor Asus ROG Strix XG27WCS </h3>
+
+                    <p class="stock">Stock: 5 unidades</p>
+                    <p class="caracteristicas">Características:</p>
+                    <p class="caracteristicas-extra">Pantalla: 27" Curva 1440p <br>Frecuencia: 180 Hz <br>Tiempo: 1 ms (GTG) <br>HDR: DisplayHDR 400.</p>
+                    <h3 class="precio"> 4600 BOB </h3>
+                    <button class="btn btn-warning btn-block btn-sm btn-md btn-lg" onclick="location.href='compra.html'" style="margin: 0 auto;">Ver más</button>
+                  </div>
+              </div>
+              <div class="card-producto">
+                  <img src="img/productos mas buscados/4.png" alt="Producto 4">
+                  <div class="texto-producto">
+                    <h3 class="id-product">Monitor ROG Swift OLED PG27AQDM</h3>
+
+                    <p class="stock">Stock: 5 unidades</p>
+                    <p class="caracteristicas">Características:</p>
+                    <p class="caracteristicas-extra">Pantalla: 26.5" OLED QHD.<br>Frecuencia: 240 Hz.<br>Tiempo: 0.03 ms.<br>Brillo: 1000 nits.<br></p>
+                    <h3 class="precio"> 12000 BOB </h3>
+                    <button class="btn btn-warning btn-block btn-sm btn-md btn-lg" onclick="location.href='compra.html'" style="margin: 0 auto;">Ver más</button>
+                  </div>
+              </div>
+              <div class="card-producto">
+                <img src="img/productos mas buscados/5.png" alt="Producto 1">
+                <div class="texto-producto">
+                  <h3 class="id-product">ROG Ally X (2024) RC72LA</h3>
+                  <p class="stock">Stock: 10 unidades</p>
+                  <p class="caracteristicas">Características:</p>
+                  <p class="caracteristicas-extra">CPU: AMD Ryzen Z1 Extreme.<br>RAM: 24 GB LPDDR5X.<br>SSD: 1 TB PCIe 4.0.<br>Pantalla: 7" FHD 120 Hz.</p>
+                  <h3 class="precio"> 12000 BOB </h3>
+                  <button class="btn btn-warning btn-block btn-sm btn-md btn-lg" onclick="location.href='compra.html'" style="margin: 0 auto;">Ver más</button>
+                </div>
+            </div>
+            <div class="card-producto">
+                <img src="img/productos mas buscados/6.png" alt="Producto 2">
+                <div class="texto-producto">
+                  <h3 class="id-product">Tarjeta Gráfica RTX 4090 AORUS MASTER</h3>
+                  <p class="stock">Stock: 10 unidades</p>
+                  <p class="caracteristicas">Características:</p>
+                  <p class="caracteristicas-extra">GPU: NVIDIA GeForce RTX 40.<br>Memoria: 24 GB GDDR6X.<br>Rendimiento: Ray Tracing y DLSS 3.<br>Enfriamiento: Sist. avanzado.<br></p>
+                  <h3 class="precio"> 27500 BOB </h3>
+                  <button class="btn btn-warning btn-block btn-sm btn-md btn-lg" onclick="location.href='compra.html'" style="margin: 0 auto;">Ver más</button>
+                </div>
+            </div>
+            <div class="card-producto">
+                <img src="img/productos mas buscados/7.png" alt="Producto 3">
+                <div class="texto-producto">
+                  <h3 class="id-product">Monitor ProArt PA328CGV</h3>
+                  <p class="stock">Stock: 10 unidades</p>
+                  <p class="caracteristicas">Características:</p>
+                  <p class="caracteristicas-extra">Pantalla: 32" QHD (2560 x 1440).<br>Brillo: 600 nits HDR.<br>Frecuencia: 165 Hz.<br>Color: 95% DCI-P3.<br></p>
+                  <h3 class="precio"> 7140 BOB </h3>
+                  <button class="btn btn-warning btn-block btn-sm btn-md btn-lg" onclick="location.href='compra.html'" style="margin: 0 auto;">Ver más</button>
+                </div>
+            </div>
+            <div class="card-producto">
+                <img src="img/productos mas buscados/8.png" alt="Producto 4">
+                <div class="texto-producto">
+                  <h3 class="id-product">ROG Ally (2023) RC71L</h3>
+                  <p class="stock">Stock: 10 unidades</p>
+                  <p class="caracteristicas">Características:</p>
+                  <p class="caracteristicas-extra">CPU: AMD Ryzen Z1.<br>RAM: 16 GB LPDDR5.<br>SSD: 512 GB PCIe 4.0.<br>Pantalla: 7" FHD 120 Hz.<br></p>
+                  <h3 class="precio"> 9000 BOB </h3>
+                  <button class="btn btn-warning btn-block btn-sm btn-md btn-lg" onclick="location.href='compra.html'" style="margin: 0 auto;">Ver más</button>
+                </div>
+            </div>
+          </div>
+  </section>
+  <!-- Marcas con las que trabaja -->
+  <section class="marcas" style="background-image: url(img/fondo1.jpg); background-size: cover;">
+    <div class="container-2">
+      <div class="subtitulo2" style="display: flex; justify-content: center; padding-top: 2rem;">
+        <img src="icons/brand.svg" style="height: 1.8vw; max-height: 36px; min-height: 36px;" alt="">
+        <h3 class="#" style="text-align: center; margin-left: 0.75em; color: white;">TRABAJAMOS CON LAS MEJORES MARCAS DEL MERCADO</h3>
+      </div>
+      <p class="#" style="text-align: center; color: #1a1a1a; margin: 0 15%; padding: 16px 0;">Las marcas más reconocidas en la industria tecnológica, garantizando que cada producto en nuestra tienda cumpla con los más altos estándares de calidad. Descubre nuestras asociaciones con líderes como Asus, Samsung y Razer, entre otros.</p>
+    <div class="container-carousel-marcas" class="carousel-marcas slide" data-bs-ride="carousel">
+      <div class="carousel-marcas" >
+        <div class="brand" id="card1">
+        </div>
+        <div class="brand" id="card2">
+        </div>
+        <div class="brand" id="card3">
+        </div>
+        <div class="brand" id="card4">
+        </div>
+      </div>
+    </div>
+  </div>    
+  </section>
+ <!-- Novedades y proximos lanzamientos -->
+  <section class="novedades">
+    <div class="container-3">
+      <div class="subtitulo3" style="display: flex">
+        <img src="icons/Novedades.svg" style="height: 1.875vw; max-height: 36px; min-height: 18px;" alt="">
+        <h3 class="#" style="text-align: left;margin-bottom: 12px; margin-top: 12px; margin-left: 12px;">PRÓXIMOS LANZAMIENTOS</h3>
+      </div>
+        <p class="#" style="text-align: left; color: #1a1a1a; margin-bottom: 32px;">Mantente <B>ATENTO A NUESTRAS</B>  ultimas <B>ACTUALIZACIONES</B></p>
+    </div>
+    <div class="cont-nov">
+      <div class="grid-novedades">
+          <div class="card-novedad">
+              <h4 class="id-novedades">Rog Ally X (2024)</h4>
+              <img src="img/Novedades/novedad1.png" alt="">
+              <div class="fecha-salida">
+                  <p>Julio 2024</p>
+              </div>
+              <div class="datos">
+                  <p style="color: white; font-weight: 400; line-height: 2;">
+                      Pantalla FHD de 7" con tecnología IPS, ofreciendo una resolución de 1920 x 1080 y una frecuencia de actualización de 120 Hz. <br>
+                      Equipado con un procesador AMD Ryzen™ Z1 Extreme que cuenta con 8 núcleos y 16 hilos, alcanzando frecuencias de hasta 5.1 GHz.
+                  </p>
+                  <button class="btn btn-warning btn-block btn-sm btn-md btn-lg">Notifícame</button>
+              </div>
+          </div>
+          <div class="card-novedad">
+              <h4 class="id-novedades">ASUS ROG Swift OLED PG32UQX</h4>
+              <img src="img/Novedades/novedad2.png" alt="">
+              <div class="fecha-salida">
+                  <p>Septiembre 2024</p>
+              </div>
+              <div class="datos">
+                  <p style="color: white; font-weight: 400; line-height: 2;">
+                      Monitor OLED de 32" con resolución 4K (3840 x 2160) y una frecuencia de actualización de hasta 240 Hz. <br>
+                      Ofrece un brillo máximo de hasta 1000 nits y una cobertura del espectro DCI-P3 del 98%.
+                  </p>
+                  <button class="btn btn-warning btn-block btn-sm btn-md btn-lg">Notifícame</button>
+              </div>
+          </div>
+          <div class="card-novedad">
+              <h4 class="id-novedades">NVIDIA GeForce RTX 5090</h4>
+              <img src="img/Novedades/novedad3.png" alt="">
+              <div class="fecha-salida">
+                  <p>Finales de 2024</p>
+              </div>
+              <div class="datos">
+                  <p style="color: white; font-weight: 400; line-height: 2;">
+                      Cuenta con 24 GB de memoria GDDR7, lo que permite manejar texturas complejas y altos niveles de detalle. <br>
+                      Diseñada con un sistema de refrigeración avanzado que asegura temperaturas óptimas durante sesiones prolongadas de juego.
+                  </p>
+                  <button class="btn btn-warning btn-block btn-sm btn-md btn-lg">Notifícame</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Contenedor del slider, solo visible en pantallas pequeñas -->
+<div class="slider-novedades">
+  <div class="deslizar-texto">
+    <span style="display: inline-flex; align-items: center; font-weight: 700; text-decoration: underline;">
+      Deslizar
+      <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 320 512" style="fill: #000000; margin-left: 5px;">
+        <path d="M285.476 272.971L100.02 458.427c-12.497 12.497-32.758 12.497-45.255 0l-22.623-22.623c-12.497-12.497-12.497-32.758 0-45.255L182.745 256 32.141 105.451c-12.497-12.497-12.497-32.758 0-45.255l22.623-22.623c12.497-12.497 32.758-12.497 45.255 0l185.456 185.456c12.497 12.497 12.497 32.759.001 45.258z"/>
+      </svg>
+    </span>    
+  </div>
+  <div class="slider-contenido">
+      <div class="card-novedad-slider">
+          <h4 class="id-novedades-slider">Rog Ally X (2024)</h4>
+          <img src="img/Novedades/novedad1.png" alt="">
+          <div class="fecha-salida-slider">
+              <p>Julio 2024</p>
+          </div>
+          <div class="datos-slider">
+              <p style="color: white; font-weight: 400; line-height: 2;">
+                  Pantalla FHD de 7" con tecnología IPS, ofreciendo una resolución de 1920 x 1080 y una frecuencia de actualización de 120 Hz. <br>
+                  Equipado con un procesador AMD Ryzen™ Z1 Extreme que cuenta con 8 núcleos y 16 hilos, alcanzando frecuencias de hasta 5.1 GHz.
+              </p>
+              <a href="user.html"><button class="btn btn-warning btn-block btn-sm btn-md btn-lg">Notifícame</button></a>
+          </div>
+      </div>
+      <div class="card-novedad-slider">
+          <h4 class="id-novedades-slider">ASUS ROG Swift OLED PG32UQX</h4>
+          <img src="img/Novedades/novedad2.png" alt="">
+          <div class="fecha-salida-slider">
+              <p>Septiembre 2024</p>
+          </div>
+          <div class="datos-slider">
+              <p style="color: white; font-weight: 400; line-height: 2;">
+                  Monitor OLED de 32" con resolución 4K (3840 x 2160) y una frecuencia de actualización de hasta 240 Hz. <br>
+                  Ofrece un brillo máximo de hasta 1000 nits y una cobertura del espectro DCI-P3 del 98%.
+              </p>
+              <button class="btn btn-warning btn-block btn-sm btn-md btn-lg" onclick="location.href='user.html'" >Notifícame</button>
+          </div>
+      </div>
+      <div class="card-novedad-slider">
+          <h4 class="id-novedades-slider">NVIDIA GeForce RTX 5090</h4>
+          <img src="img/Novedades/novedad3.png" alt="">
+          <div class="fecha-salida-slider">
+              <p>Finales de 2024</p>
+          </div>
+          <div class="datos-slider">
+              <p style="color: white; font-weight: 400; line-height: 2;">
+                  Cuenta con 24 GB de memoria GDDR7, lo que permite manejar texturas complejas y altos niveles de detalle sin comprometer el rendimiento. <br>
+                  Diseñada con un sistema de refrigeración avanzado que asegura temperaturas óptimas durante sesiones prolongadas de juego.
+              </p>
+              <button class="btn btn-warning btn-block btn-sm btn-md btn-lg" onclick="location.href='user.html'" >Notifícame</button>
+          </div>
+      </div>
+  </div>
+</div>
+  </section>
+  
+  <!-- Redes sociales y comunidad -->
+  <section>
+    <h3 class="#" style="text-align: center; padding: 1em;">ÚNETE A NUESTRA COMUNIDAD</h3>
+    <p class="#" style="text-align: center; color: #1a1a1a; margin: 1.5em">Forma parte de nuestra comunidad y mantente al tanto de nuestras ofertas y novedades en NUESTRAS REDES SOCIALES</p>
+    <div class="redes-sociales">
+      <img src="img/redes/facebook.png" onclick="location.href='https://www.facebook.com/OriginsPCEsports'" alt="">
+      <img src="img/redes/Instagram.png"  onclick="location.href='https://www.instagram.com/origins_gamer_store?fbclid=IwY2xjawGsu_ZleHRuA2FlbQIxMAABHVHdn3iP2O_69ph45EmKfL2ftJ0fn8fyVYRkbGegvuT2730uLThWeLG9ow_aem_4-MM58VLa8HqhgU2Dj4IWg'" alt="">
+      <img src="img/redes/tiktok.png" onclick="location.href='https://www.tiktok.com/@originsgamerstore?fbclid=IwY2xjawGsvEBleHRuA2FlbQIxMAABHScJP0K_xM_cD_ZZ21Nb3XysTTsKD077hqqc9OKFatJBj1yJQnQ23z8hcw_aem_yMFQGi8B8A7RPEx8EXNUmg'" alt="">
+      <img src="img/redes/telegram.png" alt="">
+      <img src="img/redes/twiter.png" alt="">
+    </div>
+    <div class="Seccion-final">
+      <h4 class="#" style="text-align: center;margin-bottom: 12px; padding-top: 120px; padding-bottom: 24px;">NO TE PIERDAS DE NUESTROS EVENTOS</h4>
+      <div class="fotos-eventos">
+        <div class="#" id=""><img src="img/fotos/image.jpg" alt=""></div>
+        <div class="#" id=""><img src="img/fotos/image-1.jpg" alt=""></div>
+        <div class="#" id=""><img src="img/fotos/image-2.jpg" alt=""></div>
+      </div>
+      <div class="slider-eventos-container">
+        <!-- Texto de indicación para deslizar -->
+        <div class="indicacion-slider">
+          <span style="display: inline-flex; align-items: center; font-weight: 700; text-decoration: underline;">
+            Deslizar
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 320 512" style="fill:#ff6600; margin-left: 5px;">
+              <path d="M285.476 272.971L100.02 458.427c-12.497 12.497-32.758 12.497-45.255 0l-22.623-22.623c-12.497-12.497-12.497-32.758 0-45.255L182.745 256 32.141 105.451c-12.497-12.497-12.497-32.758 0-45.255l22.623-22.623c12.497-12.497 32.758-12.497 45.255 0l185.456 185.456c12.497 12.497 12.497 32.759.001 45.258z"/>
+            </svg>
+        </div>
+        <!-- Slider solo visible en pantallas pequeñas -->
+        <div class="slider-eventos">
+          <div class="slide">
+            <img src="img/fotos/image.jpg" alt="Evento 1">
+          </div>
+          <div class="slide">
+            <img src="img/fotos/image-1.jpg" alt="Evento 2">
+          </div>
+          <div class="slide">
+            <img src="img/fotos/image-2.jpg" alt="Evento 3">
+          </div>
+        </div>
+      </div>
+      <h4 class="#" style="text-align: center;margin-bottom: 12px; padding-top: 20.5vw;">Comunícate con nosotros</h4>
+      <p class="#" style="color: white; margin:24px 30vw ;"><b>Distribuidores, operadores y clientes</b> <br>Si estas interesando en nuestros productos y quieres formas parte del equipo escribenos. <br>
+      </p>
+      <button class="btn btn-warning btn-block btn-sm btn-md btn-lg" onclick="location.href='contactanos.html'">Contacto</button>
+    </div>
+  </section>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container-footer">
+          <div class="content-footer">
+              <div class="categorias">Categorias
+                  <nav class="main-navigation">
+                      <ul class="nav-foot">
+                          <li><a class="nav-link-foot" href="productos.html">Productos</a></li>
+                          <li><a class="nav-link-foot" href="marcas.html">Marcas</a></li>
+                          <li><a class="nav-link-foot" href="soporte.html">Soporte</a></li>
+                          <li><a class="nav-link-foot" href="contactanos.html">Contáctanos</a></li>
+                      </ul>
+                  </nav>
+              </div>
+              <div class="servicio-al-cliente">Servicio al cliente
+                  <nav class="main-navigation">
+                      <ul class="nav-foot">
+                          <li><a class="nav-link-foot" href="service-1.html">Envíos y Entregas</a></li>
+                          <li><a class="nav-link-foot" href="service-2.html">Garantía y Soporte técnico</a></li>
+                          <li><a class="nav-link-foot" href="service-3.html">Devoluciones y Reenvíos</a></li>
+                          <li><a class="nav-link-foot" href="contactanos.html">Contacto</a></li>
+                      </ul>
+                  </nav>
+              </div>
+              <div class="como-comprar">Cómo comprar
+                  <nav class="main-navigation">
+                      <ul class="nav-foot">
+                          <li><a class="nav-link-foot" href="service-1.html">Cómo comprar por WEB</a></li>
+                          <li><a class="nav-link-foot" href="service-1.html">Cómo comprar por asesor</a></li>
+                          <li><a class="nav-link-foot" href="service-1.html">Métodos de pago</a></li>
+                      </ul>
+                  </nav>
+              </div>
+          </div>
+          <div class="right-foot">
+              <img src="img/logo/logo negativo.svg" alt="" class="logo-footer">
+              <form class="form-suscripcion">
+                  <input type="email" id="email" placeholder="Introduce tu correo" required class="input-suscripcion">
+                  <button type="submit" class="button-suscripcion">Ir</button>
+              </form>
+              <p>Revisa nuestras redes sociales</p>
+              <div class="rs-footer">
+                  <img src="img/redes/image 1.svg"  onclick="location.href='https://www.facebook.com/OriginsPCEsports'" alt="">
+                  <img src="img/redes/image 2.svg" onclick="location.href='https://www.instagram.com/origins_gamer_store?fbclid=IwY2xjawGsu_ZleHRuA2FlbQIxMAABHVHdn3iP2O_69ph45EmKfL2ftJ0fn8fyVYRkbGegvuT2730uLThWeLG9ow_aem_4-MM58VLa8HqhgU2Dj4IWg'" alt="">
+                  <img src="img/redes/image 3.svg" onclick="location.href='https://www.tiktok.com/@originsgamerstore?fbclid=IwY2xjawGsvEBleHRuA2FlbQIxMAABHScJP0K_xM_cD_ZZ21Nb3XysTTsKD077hqqc9OKFatJBj1yJQnQ23z8hcw_aem_yMFQGi8B8A7RPEx8EXNUmg'" alt="">
+                  <img src="img/redes/image 4.svg" alt="">
+                  <img src="img/redes/image 5.svg" alt="">
+              </div>
+          </div>
+      </div>
+      <p class="footer-text">© 2024 Origins Gamer Store. Todos los derechos reservados</p>
+  </footer>
+  
+
+    <!-- Bootstrap JS local -->
+    <script src="scripts/js/bootstrap.bundle.min.js"></script>
+    <!-- Archivo JavaScript personalizado -->
+    <script src="scripts/js/main.js"></script>
+    <script>
+      document.querySelectorAll('.brand').forEach(card => {
+        card.addEventListener('click', () => {
+            // Aquí puedes definir URLs específicas por card
+            const id = card.getAttribute('id');
+            let url = '#'; // URL por defecto
+    
+            switch(id) {
+                case 'card1':
+                    url = 'marcas.html';
+                    break;
+                case 'card2':
+                    url = 'marcas.html';
+                    break;
+                case 'card3':
+                    url = 'marcas.html';
+                    break;
+                case 'card4':
+                    url = 'marcas.html';
+                    break;
+                default:
+                    break;
+            }
+    
+            // Redirige a la URL
+            window.location.href = url;
+        });
+    });
+    </script>
+</body>
+</html>

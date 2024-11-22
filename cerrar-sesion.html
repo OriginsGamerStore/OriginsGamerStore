@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cerrar Sesión</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <header class="simple-header">
+        <!-- Logo como botón de inicio -->
+        <a href="index.html" class="logo-gris">
+            <img src="img/logo/logo gris.png" alt="Logo" class="logo-image">
+        </a>
+        <!-- Icono de cerrar que regresa a la página anterior -->
+        <button class="close-button" onclick="history.back()">
+            <svg class="close-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </header>
+  <div class="container">
+    <h1>¿Estás seguro de que quieres cerrar sesión?</h1>
+
+    <div class="card">
+      <div class="card-body">
+        <p>Para continuar, asegúrate de que has guardado tus cambios.</p>
+        <button class="btn btn-danger">Cerrar sesión</button>
+        <a href="perfil.html" class="btn btn-secondary">Cancelar</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-simple">
+    <div class="footer" style="max-height: 130px; height: 6.771vw;min-height: 70px; background-color: #efefef; display: flex; justify-content: space-around; align-items: center; margin-top: 2em;">
+      <p>©ORIGINS GAMER STORE      -   Todos los derechos estan reservados</p></a>
+      <a href=""><p>Terminos de aceptación</p></a>
+      <a href=""><p>Política de privacidad</p></a>
+    </div>
+    <div class="#" style="height: 20px; background-color: #404040;"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Verificar si el usuario está logueado
+    if (!localStorage.getItem('isLoggedIn')) {
+      window.location.href = 'user.html'; // Redirigir al login si no está logueado
+    } else {
+      const userName = localStorage.getItem('userName');
+      document.getElementById('userName').textContent = userName; // Mostrar nombre del usuario
+    }
+    // Botón de cerrar sesión en perfil.html
+document.getElementById('logoutButton').addEventListener('click', function () {
+  localStorage.removeItem('isLoggedIn');
+  localStorage.removeItem('userName'); // Si tienes más datos guardados, elimínalos también
+  window.location.href = 'login.html';
+});
+
+  </script>
+</body>
+</html>

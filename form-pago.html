@@ -1,0 +1,260 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origins Gamer Store</title>
+    <!-- Importar las tipografías Manrope y Roboto desde Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+    <!-- Bootstrap CSS local -->
+    <link rel="stylesheet" href="stylesheets/css/bootstrap.css">
+    <!-- Archivo CSS personalizado -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <header class="simple-header">
+        <!-- Logo como botón de inicio -->
+        <a href="index.html" class="logo-gris">
+            <img src="img/logo/logo gris.png" alt="Logo" class="logo-image">
+        </a>
+        <!-- Icono de cerrar que regresa a la página anterior -->
+        <button class="close-button" onclick="history.back()">
+            <svg class="close-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </header>
+    <!-- Contenido de la pagina -->
+    <div class="container-pago" style="background-image: url(img/fondo3.jpg); max-height:2500px; height:auto;">
+        <div style="display: flex; justify-content: start; align-items: center; gap: 1em; padding: 2em 7vw 0.5em 7vw;">
+            <img src="icons/compra.svg" alt="" style="height: 2.5em;">
+            <h2 style="color: #1a1a1a;">Pago</h2>
+        </div>
+    
+        <div class="container mt-4 cont-sell">
+            <div class="row">
+                <!-- Sección de productos (8 columnas en pantallas medianas y grandes) -->
+                <div class="col-12 col-md-8">
+                    <!-- Formulario de Método de Envío -->
+                    <form id="formEnvio" class="bg-light p-4 rounded">
+                        <h3>Método de Envío</h3>
+                        <!-- Correo Electrónico -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control-user" id="email" required>
+                            <small class="form-text text-muted">Este correo será utilizado para el seguimiento de tu pedido.</small>
+                        </div>
+                        <!-- Nombre y Apellido -->
+                        <div class="mb-3 row">
+                            <div class="col-md-6">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control-user" id="nombre" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="apellido" class="form-label">Apellido</label>
+                                <input type="text" class="form-control-user" id="apellido" required>
+                            </div>
+                        </div>
+                        <!-- Departamento y Ciudad -->
+                        <div class="mb-3 row">
+                            <div class="col-md-6">
+                                <label for="departamento" class="form-label">Departamento</label>
+                                <input type="text" class="form-control-user" id="departamento" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="ciudad" class="form-label">Ciudad</label>
+                                <input type="text" class="form-control-user" id="ciudad" required>
+                            </div>
+                        </div>
+                        <!-- Dirección de Envío -->
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">Dirección de Envío</label>
+                            <select class="form-select" id="direccion" required>
+                                <option value="">Seleccione...</option>
+                                <option value="local">Local (La Paz)</option>
+                                <option value="interior">Interior</option>
+                            </select>
+                        </div>
+                        <!-- Dirección Local -->
+                        <div class="mb-3" id="direccionLocal" style="display: none;">
+                            <label for="direccion_local" class="form-label">Dirección de Entrega Local</label>
+                            <input type="text" class="form-control-user" id="direccion_local">
+                        </div>
+                        <!-- Celular -->
+                        <div class="mb-3">
+                            <label for="celular" class="form-label">Celular</label>
+                            <input type="tel" class="form-control-user" id="celular" required>
+                        </div>
+                        <!-- Fecha de Nacimiento -->
+                        <div class="mb-3">
+                            <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control-user" id="fecha_nacimiento" required>
+                            <small class="form-text text-muted">Debes ser mayor de edad para realizar compras.</small>
+                        </div>
+                        <!-- Botón Continuar -->
+                        <button type="submit" class="btn btn-primary w-100" style="max-width: 250px; background-color: #ff6600; border-radius: 16px; border: none;">Continuar</button>
+                    </form>
+                        <!-- Formulario de Método de Pago (inicialmente oculto) -->
+                        <form id="formPago" style="display: none;" class="bg-light p-4 rounded mt-4">
+                            <h3>Datos Registrados</h3>
+                            <!-- Datos de Envío (mismos que en el primer formulario) -->
+                            <div class="mb-3">
+                                <input type="text" id="nombre_pago" disabled>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" id="apellido_pago" disabled>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" id="ciudad_pago" disabled>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" id="email_pago" disabled>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" id="celular_pago" disabled>
+                            </div>
+                            <!-- Método de Pago -->
+                            <h4>Método de Pago</h4>
+                            <div class="mb-3">
+                                <label for="metodo_pago" class="form-label">Selecciona un método de pago</label>
+                                <select class="form-select" id="metodo_pago" required>
+                                    <option value="">Seleccione...</option>
+                                    <option value="pagoQR">Pago Directo QR</option>
+                                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                                </select>
+                            </div>
+                            <!-- QR -->
+                            <div id="qr" style="display: none;">
+                                <p><img src="img/qr movil.png" alt="QR Code" class="img-fluid" style="max-width: 250px;"></p>
+                                <button type="submit" class="btn btn-primary w-100" style="max-width: 250px; background-color: #ff6600; border-radius: 16px; border: none;">Descargar QR</button>
+                            </div>
+                            <!-- Tarjeta de Crédito/Débito -->
+                            <div id="tarjeta" style="display: none;">
+                                <div class="mb-3">
+                                    <label for="numero_tarjeta" class="form-label">Número de Tarjeta</label>
+                                    <input type="text" class="form-control-user" id="numero_tarjeta" placeholder="Ej: 1234 5678 9101 1121">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="fecha_expiracion" class="form-label">Fecha de Expiración</label>
+                                    <input type="month" class="form-control-user" id="fecha_expiracion">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="codigo_seguridad" class="form-label">Código de Seguridad</label>
+                                    <input type="text" class="form-control-user" id="codigo_seguridad" placeholder="Ej: 123">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100" style="max-width: 250px; background-color: #ff6600; border-radius: 16px; border: none;">Confirmar</button>
+                            </div>
+                        </form>
+
+                </div>
+    
+                <!-- Detalle de pago -->
+                <div class="col-12 col-md-4 mt-4 mt-md-0">
+                    <div class="detail p-3 rounded bg-light" style="width: 100%; margin: 0;">
+                        <div class="detail-header d-flex justify-content-between align-items-center">
+                            <h3>Detalle de PAGO</h3>
+                            <button class="toggle-detail" id="toggleDetail">&#9650;</button>
+                        </div>
+                        <div class="detail-content">
+                            <div class="fact">
+                                <div class="row">
+                                    <div class="col-6">Productos</div>
+                                    <div class="col-6 text-end">6000 BOB</div>
+                                </div>
+                            </div>
+                            <hr style="margin: 2px;">
+                            <div class="fact">
+                                <div class="row">
+                                    <div class="col-6">Envío</div>
+                                    <div class="col-6 text-end">50 BOB</div>
+                                </div>
+                            </div>
+                            <hr style="margin: 2px;">
+                            <div class="fact">
+                                <div class="row">
+                                    <div class="col-6"><b>Total</b></div>
+                                    <div class="col-6 text-end"><b>6050 BOB</b></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const formEnvio = document.getElementById('formEnvio');
+    const formPago = document.getElementById('formPago');
+    const nombrePago = document.getElementById('nombre_pago');
+    const apellidoPago = document.getElementById('apellido_pago');
+    const ciudadPago = document.getElementById('ciudad_pago');
+    const emailPago = document.getElementById('email_pago');
+    const celularPago = document.getElementById('celular_pago');
+    const metodoPagoSelect = document.getElementById('metodo_pago');
+    const qrSection = document.getElementById('qr');
+    const tarjetaSection = document.getElementById('tarjeta');
+
+    // Mostrar los datos del primer formulario en el segundo formulario
+    formEnvio.addEventListener('submit', function (event) {
+        event.preventDefault(); // Evitar el envío del formulario
+
+        // Copiar los datos del formulario de envío al formulario de pago
+        nombrePago.value = document.getElementById('nombre').value;
+        apellidoPago.value = document.getElementById('apellido').value;
+        ciudadPago.value = document.getElementById('ciudad').value;
+        emailPago.value = document.getElementById('email').value;
+        celularPago.value = document.getElementById('celular').value;
+        
+
+        // Mostrar el formulario de pago
+        formPago.style.display = 'block';
+    });
+
+    // Manejar la selección del método de pago
+    metodoPagoSelect.addEventListener('change', function () {
+        if (metodoPagoSelect.value === 'pagoQR') {
+            qrSection.style.display = 'block';
+            tarjetaSection.style.display = 'none';
+        } else if (metodoPagoSelect.value === 'tarjeta') {
+            tarjetaSection.style.display = 'block';
+            qrSection.style.display = 'none';
+        } else {
+            qrSection.style.display = 'none';
+            tarjetaSection.style.display = 'none';
+        }
+    });
+});
+
+    </script>
+
+    <footer class="footer-simple">
+            <div class="footer" style="max-height: 130px; height: 6.771vw;min-height: 70px; background-color: #efefef; display: flex; justify-content: space-around; align-items: center;">
+              <p>©ORIGINS GAMER STORE      -   Todos los derechos estan reservados</p></a>
+              <a href=""><p>Terminos de aceptación</p></a>
+              <a href=""><p>Política de privacidad</p></a>
+            </div>
+            <div class="#" style="height: 20px; background-color: #404040;"></div>
+    </footer>
+    
+    <script>
+        // Mostrar formulario de pago cuando se presiona continuar en el formulario de envío
+        document.getElementById("formEnvio").addEventListener("submit", function(event){
+            event.preventDefault(); // Evita el envío del formulario
+            document.getElementById("formEnvio").style.display = "none"; // Oculta el formulario de envío
+            document.getElementById("formPago").style.display = "block"; // Muestra el formulario de pago
+        });
+    </script>
+    <script>
+         document.addEventListener('DOMContentLoaded', () => {
+   const toggleButton = document.getElementById('toggleDetail');
+   const detail = document.querySelector('.detail');
+
+   toggleButton.addEventListener('click', () => {
+       detail.classList.toggle('expanded'); // Alternar entre mostrar y ocultar
+   });
+});
+    </script>
+    <!-- Bootstrap JS local -->
+    <script src="scripts/js/bootstrap.bundle.js"></script>
+</body>
+</html>

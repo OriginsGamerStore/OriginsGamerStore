@@ -1,0 +1,145 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origins Gamer Store</title>
+    <!-- Importar las tipografías Manrope y Roboto desde Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+    <!-- Bootstrap CSS local -->
+    <link rel="stylesheet" href="stylesheets/css/bootstrap.css">
+    <!-- Archivo CSS personalizado -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+
+  <!-- Header (idéntico al user.html) -->
+  <header class="simple-header">
+      <!-- Logo como botón de inicio -->
+      <a href="index.html" class="logo-gris">
+          <img src="img/logo/logo gris.png" alt="Logo" class="logo-image">
+      </a>
+      <!-- Icono de cerrar que regresa a la página anterior -->
+      <button class="close-button" onclick="history.back()">
+          <svg class="close-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      </button>
+  </header>
+
+  <div class="container-contact">
+    <h3 class="text-center" style="padding: 40px 7vw; color: #1a1a1a;">REGISTRO DE USUARIO</h3>
+
+    <!-- Contenedor del formulario ajustado a diferentes tamaños de pantalla -->
+    <div class="cont-form-user">
+        <!-- Formulario de registro -->
+        <form>
+            <!-- Campo para el nombre de usuario -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label for="username" class="form-label">Nombre de Usuario</label>
+                    <input type="text" class="form-control-sign " id="username" placeholder="Nombre de Usuario" required>
+                </div>
+            </div>
+
+            <!-- Campo para el correo electrónico -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control-sign" id="email" placeholder="Correo Electrónico" required>
+                </div>
+            </div>
+
+            <!-- Campo para la contraseña -->
+            <div class="row mb-3">
+                <div class="col-12 position-relative">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control-sign" id="password" placeholder="Contraseña" required>
+                    <span class="toggle-password" onfocus="togglePasswordVisibility()"></span>
+                </div>
+            </div>
+
+            <!-- Campo para repetir la contraseña -->
+            <div class="row mb-3">
+                <div class="col-12 position-relative">
+                    <label for="repeat-password" class="form-label">Repetir Contraseña</label>
+                    <input type="password" class="form-control-sign" id="repeat-password" placeholder="Repetir Contraseña" required>
+                    <span class="toggle-password" onfocus="togglePasswordVisibility()"></span>
+                </div>
+            </div>
+
+            <!-- Botón de registro -->
+            <div class="d-flex justify-content-center mb-3">
+                <button type="submit" class="btn btn-primary w-100" style="max-width: 250px; background-color: #ff6600; border-radius: 16px; border: none; margin-top: 3em;">Registrarse</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer (idéntico al user.html) -->
+    <div class="footer-simple">
+        <div class="footer" style="max-height: 130px; height: 6.771vw; min-height: 70px; background-color: #efefef; display: flex; justify-content: space-around; align-items: center; margin-top: 2em;">
+            <p>©ORIGINS GAMER STORE - Todos los derechos están reservados</p>
+            <a href=""><p>Términos de aceptación</p></a>
+            <a href=""><p>Política de privacidad</p></a>
+        </div>
+        <div class="#" style="height: 20px; background-color: #404040;"></div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS local -->
+  <script src="scripts/js/bootstrap.bundle.min.js"></script>
+  <!-- Archivo JavaScript personalizado -->
+  <script src="scripts/js/main.js"></script>
+  <script>
+    // Ejemplo de autenticación (solo una simulación básica)
+document.getElementById('loginForm').addEventListener('submit', function() {
+    // Aquí puedes agregar la lógica para verificar las credenciales en el backend (API)
+    // Esto es solo un ejemplo de almacenamiento local para simular el inicio de sesión
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+  
+    // Verificar si las credenciales son correctas (en este caso solo una simulación)
+    if (email === 'juan@example.com' && password === '123456') {
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('userName', 'Juan Pérez'); // Guardamos nombre del usuario
+      window.location.href = 'perfil.html'; // Redirigir al perfil
+    } else {
+      alert('Credenciales incorrectas');
+    }
+  });
+//formulario login
+document.querySelector('button[type="submit"]').addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Aquí deberías verificar las credenciales, por ejemplo, con localStorage
+    const storedEmail = localStorage.getItem('userEmail');
+    const storedPassword = localStorage.getItem('userPassword');
+
+    if (email === storedEmail && password === storedPassword) {
+        // Si las credenciales son correctas, redirige al usuario
+        localStorage.setItem('isLoggedIn', true);
+        window.location.href = 'perfil.html';  // Página a la que será redirigido
+    } else {
+        alert('Correo o contraseña incorrectos');
+    }
+});
+// registro.html
+document.getElementById('registerForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevenir el envío del formulario
+
+  const email = document.getElementById('registerEmail').value;
+  const password = document.getElementById('registerPassword').value;
+
+  // Guardar las credenciales en localStorage (simulación)
+  localStorage.setItem('userEmail', email);
+  localStorage.setItem('userPassword', password);
+
+  alert('Registro exitoso, ahora puedes iniciar sesión.');
+  window.location.href = 'login.html'; // Redirigir a la página de inicio de sesión
+});
+
+  </script>
+</body>
+</html>
