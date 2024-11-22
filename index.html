@@ -242,9 +242,9 @@
     <!-- Pantallas del Home -->
      <div class="#" style="text-align: center; padding-top: 2.917vw; color: #ff6600;">
       <h2 style="padding: 0 5vw;">Explora nuestra AMPLIA variedad de PRODUCTOS</h2> </div>
-      <div id="carousel-product" class="carousel slide" data-bs-ride="false">
+      <div id="carousel-product" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <!-- Item 1 (Pantallas grandes) -->
+            <!-- Aquí se colocan todos los productos en un solo contenedor inicialmente -->
             <div class="carousel-item active">
                 <div class="carousel-productos-wrapper">
                     <div class="producto">
@@ -263,12 +263,6 @@
                         <img src="img/png/productos clasificados (4).png" onclick="location.href='productos.html'" alt="Placas madre">
                         <h5>Placas madre</h5>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Item 2 (Pantallas grandes) -->
-            <div class="carousel-item">
-                <div class="carousel-productos-wrapper">
                     <div class="producto">
                         <img src="img/png/productos clasificados (5).png" onclick="location.href='productos.html'" alt="Monitores">
                         <h5>Monitores</h5>
@@ -289,7 +283,7 @@
             </div>
         </div>
     
-        <!-- Carousel Controls (Flechas para pantallas grandes) -->
+        <!-- Carousel Controls -->
         <div class="flechas">
             <button class="carousel-control-prev product-carousel-control" type="button" data-bs-target="#carousel-product" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -301,7 +295,7 @@
             </button>
         </div>
     
-        <!-- Indicadores (Para pantallas pequeñas) -->
+        <!-- Indicadores -->
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carousel-product" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carousel-product" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -309,6 +303,8 @@
             <button type="button" data-bs-target="#carousel-product" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
     </div>
+    
+    
     
 <!-- Productos mas buscados -->
     <section class="productos-buscados">
@@ -637,7 +633,7 @@
               <div class="rs-footer">
                   <img src="img/redes/image 1.svg"  onclick="location.href='https://www.facebook.com/OriginsPCEsports'" alt="">
                   <img src="img/redes/image 2.svg" onclick="location.href='https://www.instagram.com/origins_gamer_store?fbclid=IwY2xjawGsu_ZleHRuA2FlbQIxMAABHVHdn3iP2O_69ph45EmKfL2ftJ0fn8fyVYRkbGegvuT2730uLThWeLG9ow_aem_4-MM58VLa8HqhgU2Dj4IWg'" alt="">
-                  <img src="img/redes/image 3.svg" onclick="location.href='https://www.tiktok.com/@originsgamerstore?fbclid=IwY2xjawGsvEBleHRuA2FlbQIxMAABHScJP0K_xM_cD_ZZ21Nb3XysTTsKD077hqqc9OKFatJBj1yJQnQ23z8hcw_aem_yMFQGi8B8A7RPEx8EXNUmg'" alt="">
+                  <img src="img/redes/image 3.svg"  onclick="location.href='https://www.tiktok.com/@originsgamerstore?fbclid=IwY2xjawGsvEBleHRuA2FlbQIxMAABHScJP0K_xM_cD_ZZ21Nb3XysTTsKD077hqqc9OKFatJBj1yJQnQ23z8hcw_aem_yMFQGi8B8A7RPEx8EXNUmg'" alt="">
                   <img src="img/redes/image 4.svg" alt="">
                   <img src="img/redes/image 5.svg" alt="">
               </div>
@@ -652,6 +648,60 @@
     <!-- Archivo JavaScript personalizado -->
     <script src="scripts/js/main.js"></script>
     <script>
+     document.addEventListener('DOMContentLoaded', function () {
+    const carouselInner = document.querySelector('#carousel-product .carousel-inner');
+    const productos = Array.from(carouselInner.querySelectorAll('.producto'));
+
+    function reorganizeSlides() {
+        const width = window.innerWidth;
+        const slides = [];
+
+        if (width < 992) {
+            // Pantallas pequeñas - 4 slides con 2 productos cada uno
+            for (let i = 0; i < productos.length; i += 2) {
+                const slide = document.createElement('div');
+                slide.className = 'carousel-item';
+                if (i === 0) slide.classList.add('active');
+
+                const wrapper = document.createElement('div');
+                wrapper.className = 'carousel-productos-wrapper';
+
+                wrapper.appendChild(productos[i]);
+                if (productos[i + 1]) wrapper.appendChild(productos[i + 1]);
+
+                slide.appendChild(wrapper);
+                slides.push(slide);
+            }
+        } else {
+            // Pantallas grandes - 2 slides con 4 productos cada uno
+            for (let i = 0; i < productos.length; i += 4) {
+                const slide = document.createElement('div');
+                slide.className = 'carousel-item';
+                if (i === 0) slide.classList.add('active');
+
+                const wrapper = document.createElement('div');
+                wrapper.className = 'carousel-productos-wrapper';
+
+                for (let j = i; j < i + 4 && j < productos.length; j++) {
+                    wrapper.appendChild(productos[j]);
+                }
+
+                slide.appendChild(wrapper);
+                slides.push(slide);
+            }
+        }
+
+        // Limpiar y agregar los slides nuevos
+        carouselInner.innerHTML = '';
+        slides.forEach(slide => carouselInner.appendChild(slide));
+    }
+
+    // Ejecutar al cargar y al cambiar tamaño de ventana
+    reorganizeSlides();
+    window.addEventListener('resize', reorganizeSlides);
+});
+
+
       document.querySelectorAll('.brand').forEach(card => {
         card.addEventListener('click', () => {
             // Aquí puedes definir URLs específicas por card

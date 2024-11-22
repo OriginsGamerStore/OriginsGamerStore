@@ -2632,4 +2632,7 @@ label {
 .etiqueta {
     width: 100%;
 }
+.carousel-productos-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+}
 }
